@@ -1,0 +1,24 @@
+.footer {
+  padding-top: 60px;
+  padding-left: 60px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  
+  ul {
+    flex-grow: 1;
+    max-width: 800px;
+    
+    li {
+      display: inline-block;
+      width: 150px;
+      padding: 5px;
+    }
+  }
+
+  a {
+    @include themify($themes) {
+      color: themed('textColor');
+    }
+  }
+}

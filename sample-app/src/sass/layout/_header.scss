@@ -1,0 +1,56 @@
+.header {
+  $padding: 26px $spacing-large;
+  
+  @include themify($themes) {
+    background-color: themed('backgroundColor');
+  }
+  
+  height: 70px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 4;
+  flex-direction: row;
+
+
+  .logo {
+    color: $primary-red;
+    font-weight: 700;
+    width: 100px;
+    height: 100%;
+    padding: $padding;
+
+    &::before {
+      content: 'SASSFLIX';
+    }
+  }
+
+  .navigation {
+    flex-grow: 1;
+  
+    & > ul {
+      padding: $padding;
+  
+      li {
+        &:first-child {
+          font-weight: 500;
+        }
+  
+        display: inline;
+        padding-left: 20px;
+      }
+    }
+  
+    a {
+      @include themify($themes) {
+        color: themed('textColor');
+      }
+  
+      &:hover {
+        @include themify($themes) {
+          color: lighten(themed('textColor'), 30%);
+        }
+      }
+    }
+  }
+}

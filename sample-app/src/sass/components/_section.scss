@@ -1,0 +1,33 @@
+section.row {
+  position: relative;
+  z-index: 2;
+  margin-bottom: $spacing-medium;
+  
+  @include fill-sections();
+  
+  h2 {
+    margin-left: $spacing-large;
+    
+    @include themify($themes) {
+      color: themed('textColor');
+    }
+  }
+  
+  div {
+    overflow-x: scroll;
+    padding: $spacing-medium $spacing-large;
+
+    ul {
+      @extend %nowrap-row;
+      
+      li {
+        background-color: $primary-grey;
+        display: inline-block;
+        align-items: center;
+        z-index: 3;
+        
+        @extend .thumbnail;
+      }
+    }
+  }
+}

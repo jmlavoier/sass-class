@@ -1,0 +1,30 @@
+@import 
+  'base/reset',
+  'base/typography';
+
+@import 
+  'abstracts/variables',
+  'abstracts/mixins',
+  'abstracts/placeholders',
+  'abstracts/functions';
+
+@import 
+  'components/billboard',
+  'components/thumbnails',
+  'components/section';
+
+@import 
+  'layout/content',
+  'layout/header',
+  'layout/footer';
+
+
+html, body {
+  font-family: $font-family;
+}
+
+.container {
+  @include themify($themes) {
+    background-color: themed('backgroundColor');
+  }
+}
