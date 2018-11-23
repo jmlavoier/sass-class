@@ -12,7 +12,6 @@ Hi. My name is João Lavoier! And I am...
 - Full-Stack React ecossystem
 - Learning about Functional Programming
 - Love to play guitar, beer and hamburguer crafts
-- Like to discuss and learn about science, politics, religion and all sort of the controversial subjects
 - Believe that I can use technology to contribute in making the world a better place :heart:
 
 ## Prerequisites 
@@ -50,10 +49,13 @@ Hi. My name is João Lavoier! And I am...
   - Nesting
   - Partials
   - Import
-  - Mixins
   - Inheritance (Placeholder class)
+  - Mixins
+  - Functions
+  - Loop
   - Operators
-  - Theming
+  - Themify
+4. **Building a project**
 
 ## I also can help you with
 - JavaScript (ES6+)
@@ -71,3 +73,7 @@ Hi. My name is João Lavoier! And I am...
 
 ## Reference 
 - [Sass Documentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+- [Theming with Sass](https://medium.com/@dmitriy.borodiy/easy-color-theming-with-scss-bc38fd5734d1)
+- [Functions](http://sass-lang.com/documentation/Sass/Script/Functions.html)
+- [Windows install](https://www.codementor.io/ricardozea/sass-for-beginners-the-friendliest-guide-about-installing-and-using-sass-on-windows-cjfs2id3o)
+- [Architecure](https://sass-guidelin.es/#architecture)
