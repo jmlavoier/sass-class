@@ -1,0 +1,17 @@
+html, 
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  
+  li > div {
+    border: 1px solid red;
+    height: 320px;
+    background-repeat: no-repeat;
+  }
+}
+
