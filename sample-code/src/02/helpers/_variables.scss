@@ -1,0 +1,28 @@
+$primary-black: #010101;
+$primary-background: #a3a3a3;
+$fancy-pink: pink;
+
+$font-size-small: 12px;
+$font-size-medium: 16px;
+$font-size-large: 22px;
+$font-size-x-large: 36px;
+
+$text-color: $fancy-pink;
+
+$breakpoints: (
+  sm: (min: 320px, max: 799px),
+  md: (min: 800px, max: 1199px),
+  lg: (min: 1200px, max: 1599px),
+  lgx: 1600px,
+);
+
+$themes: (
+  books: (
+    primaryBackground: $primary-background,
+    primaryTextColor: $text-color,
+  ),
+  courses: (
+    primaryBackground: $fancy-pink,
+    primaryTextColor: $primary-black,
+  )
+);

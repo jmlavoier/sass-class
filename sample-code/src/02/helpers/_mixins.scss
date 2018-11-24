@@ -1,0 +1,37 @@
+@mixin respond-to($breakpoint-key) {
+  @if $breakpoint-key == 'lgx' {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint-key)) {
+      @content; 
+    }
+  }
+  @else {
+    @if map-has-key($breakpoints, $breakpoint-key) {
+      $bp: map-get($breakpoints, $breakpoint-key);
+
+      @media screen and (
+        min-width: map-get($bp, 'min')
+      ) and (
+        max-width: map-get($bp, 'max')
+      ) {
+        @content; 
+      }
+    }
+    @else {
+      @warn "Unfortunately you aren't using those keys #{map-keys($breakpoints)}";
+    }
+  }
+}
+
+@mixin border-radius($size) {
+  border-radius: $size;
+  -webkit-border-radius: $size;
+}
+
+
+@mixin square($size) {
+  height: $size;
+  width: $size;
+}
+
+
+

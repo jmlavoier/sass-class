@@ -1,0 +1,31 @@
+@import 'variables';
+
+.container {
+  background-color: $background;
+}
+
+.content {
+  color: red;
+
+  &.triste {
+    font-size: 12px;
+  }
+
+  div {
+    font-size: 12px;
+  }
+}
+
+button {
+  @extend %button;
+}
+
+%x {
+  border: 1px solid #000;
+}
+
+.button-teste {
+  font-size: 12px;
+  @extend %x;
+
+}

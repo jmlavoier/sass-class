@@ -1,0 +1,18 @@
+@import 'main';
+
+@for $i from 1 through 10 {
+  .linha-#{$i} {
+    $color: lighten($fancy-pink, 3% * $i);
+
+    @include respond-to('sfd') {
+      width: 200px;
+    };
+
+    background-color: $color;
+    &::before {
+      content: '#{$color}';
+      color: $primary-black;
+    }
+  }
+}
+

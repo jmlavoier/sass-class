@@ -1,0 +1,31 @@
+$font-family: 'Helvetica';
+
+$primary-black: #010101;
+$primary-color: #48a0dc;
+$fancy-pink: pink;
+$secondary-color: darken(#48a0dc, 20%);
+
+$font-size-small: 12px;
+$font-size-medium: 16px;
+$font-size-large: 22px;
+$font-size-x-large: 36px;
+
+$text-color: $fancy-pink;
+
+$breakpoints: (
+  sm: (min: 320px, max: 799px),
+  md: (min: 800px, max: 1199px),
+  lg: (min: 1200px, max: 1599px),
+  lgx: 1600px,
+);
+
+$themes: (
+  books: (
+    primaryBackground: $primary-color,
+    primaryTextColor: $text-color,
+  ),
+  courses: (
+    primaryBackground: $fancy-pink,
+    primaryTextColor: $primary-black,
+  )
+);

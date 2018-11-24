@@ -1,0 +1,19 @@
+.content {
+  padding-top: $header-height;
+  height: 100vh;
+
+  @include themify {
+    background-color: themed('primaryBackground');
+    color: themed('primaryTextColor');
+  }
+
+  div {
+    float: left;
+    @extend %figure;
+    @include fill-images;
+
+    @include respond-to('sm') {
+      @include figure-size(180px);
+    }
+  }
+}

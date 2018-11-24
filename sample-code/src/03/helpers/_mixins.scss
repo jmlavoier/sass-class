@@ -1,0 +1,51 @@
+@mixin respond-to($breakpoint-key) {
+  @if $breakpoint-key == 'lgx' {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint-key)) {
+      @content; 
+    }
+  }
+  @else {
+    @if map-has-key($breakpoints, $breakpoint-key) {
+      $bp: map-get($breakpoints, $breakpoint-key);
+
+      @media screen and (
+        min-width: map-get($bp, 'min')
+      ) and (
+        max-width: map-get($bp, 'max')
+      ) {
+        @content; 
+      }
+    }
+    @else {
+      @warn "Unfortunately you aren't using those keys #{map-keys($breakpoints)}";
+    }
+  }
+}
+
+$images: 'anakin', 'c3po', 'luke', 'r2d2';
+@mixin fill-images {
+  $child-number: 1;
+
+  @each $image in $images {
+    &:nth-child(#{$child-number}) {
+      background-image: url(#{$image}.png);
+    }
+    $child-number: $child-number + 1;
+  }
+}
+
+@mixin figure-size($width) {
+  width: $width;
+  height: $width + floor($width*0.875);
+}
+
+@mixin themify {
+  @each $theme, $theme-map in $themes {
+    .theme-#{$theme} & {
+      $theme-styles: $theme-map !global;
+
+      @content;
+      $theme-styles: null !global;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+// Layout
+$header-height: 70px;
+
+.header {
+  height: $header-height;
+  position: fixed;
+  width: 100%;
+
+  @include themify {
+    background-color: themed('backgroundColor');
+  }
+}

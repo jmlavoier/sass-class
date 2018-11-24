@@ -1,0 +1,13 @@
+$background: #fff;
+$value: 'background';
+
+%button {
+	$color: #000;
+	$background: #444;
+	background-color: $background;
+	color: $color;
+}
+
+%button-2 {
+	#{$value}-color: $background;
+}
